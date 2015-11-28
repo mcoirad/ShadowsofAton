@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 8c8b1b2723447914cae7645589073cc0
+timeCreated: 1445918888
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CaravelDefault_0
+    21300002: CaravelDefault_1
+    21300004: CaravelDefault_2
+    21300006: CaravelDefault_3
+    21300008: CaravelDefault_4
+    21300010: CaravelDefault_5
+    21300012: CaravelDefault_6
+    21300014: CaravelDefault_7
+    21300016: CaravelDefault_8
+    21300018: CaravelDefault_9
+    21300020: CaravelDefault_10
+    21300022: CaravelDefault_11
+    21300024: CaravelDefault_12
+    21300026: CaravelDefault_13
+    21300028: CaravelDefault_14
+    21300030: CaravelDefault_15
+    21300032: CaravelDefault_16
+    21300034: CaravelDefault_17
+    21300036: CaravelDefault_18
+    21300038: CaravelDefault_19
+    21300040: CaravelDefault_20
+    21300042: CaravelDefault_21
+    21300044: CaravelDefault_22
+    21300046: CaravelDefault_23
+    21300048: CaravelDefault_24
+    21300050: CaravelDefault_25
+    21300052: CaravelDefault_26
+    21300054: CaravelDefault_27
+    21300056: CaravelDefault_28
+    21300058: CaravelDefault_29
+    21300060: CaravelDefault_30
+    21300062: CaravelDefault_31
+    21300064: CaravelDefault_32
+    21300066: CaravelDefault_33
+    21300068: CaravelDefault_34
+    21300070: CaravelDefault_35
+    21300072: CaravelDefault_36
+    21300074: CaravelDefault_37
+    21300076: CaravelDefault_38
+    21300078: CaravelDefault_39
+    21300080: CaravelDefault_40
+    21300082: CaravelDefault_41
+    21300084: CaravelDefault_42
+    21300086: CaravelDefault_43
+    21300088: CaravelDefault_44
+    21300090: CaravelDefault_45
+    21300092: CaravelDefault_46
+    21300094: CaravelDefault_47
+    21300096: CaravelDefault_48
+    21300098: CaravelDefault_49
+    21300100: CaravelDefault_50
+    21300102: CaravelDefault_51
+    21300104: CaravelDefault_52
+    21300106: CaravelDefault_53
+    21300108: CaravelDefault_54
+    21300110: CaravelDefault_55
+    21300112: CaravelDefault_56
+    21300114: CaravelDefault_57
+    21300116: CaravelDefault_58
+    21300118: CaravelDefault_59
+    21300120: CaravelDefault_60
+    21300122: CaravelDefault_61
+    21300124: CaravelDefault_62
+    21300126: CaravelDefault_63
+    21300128: CaravelDefault_64
+    21300130: CaravelDefault_65
+    21300132: CaravelDefault_66
+    21300134: CaravelDefault_67
+    21300136: CaravelDefault_68
+    21300138: CaravelDefault_69
+    21300140: CaravelDefault_70
+    21300142: CaravelDefault_71
+    21300144: CaravelDefault_72
+    21300146: CaravelDefault_73
+    21300148: CaravelDefault_74
+    21300150: CaravelDefault_75
+    21300152: CaravelDefault_76
+    21300154: CaravelDefault_77
+    21300156: CaravelDefault_78
+    21300158: CaravelDefault_79
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CaravelDefault_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_4
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_6
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_8
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_9
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 483.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_11
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_12
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_13
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_14
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_15
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_16
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_17
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_18
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_19
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 414.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_21
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_22
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_23
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_24
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_25
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_26
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_27
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_28
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_29
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 345.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_31
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_32
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_33
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_34
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_35
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_36
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_37
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_38
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_39
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 276.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_41
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_42
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_43
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_44
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_45
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_46
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_47
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_48
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_49
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 207.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_51
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_52
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_53
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_54
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_55
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_56
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_57
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_58
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_59
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 138.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_61
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_62
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_63
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_64
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_65
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_66
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_67
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_68
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_69
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 69.875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_71
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_72
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_73
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_74
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_75
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_76
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_77
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_78
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CaravelDefault_79
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: .875
+        width: 78.0999985
+        height: 69.125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

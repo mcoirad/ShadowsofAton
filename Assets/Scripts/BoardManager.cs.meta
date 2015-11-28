@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e8e953c2b70650444bdccf04044130bd
+timeCreated: 1446505073
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Sea1: {fileID: 119742, guid: 3ef4d0c26fe039d42b2b8c2cb5a025cc, type: 2}
+  - Player1: {fileID: 180638, guid: 3c9f5426ff069fd4c919d49ab455ad9d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
