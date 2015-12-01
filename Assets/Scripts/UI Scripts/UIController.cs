@@ -4,7 +4,7 @@ using System.Collections;
 
 public class UIController : MonoBehaviour {
 
-	public UIController UIguy;
+	public static UIController UIguy;
 	
 	// Game text UI
 	public Image TextHolder;

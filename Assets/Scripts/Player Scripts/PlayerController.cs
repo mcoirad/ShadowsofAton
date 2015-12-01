@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 	
 	public Vector2 pos;
+	
+	// UI popups
+	public GameObject PopBack;
+	protected GameObject PopBack2;
+	public Text PopText;
+	protected Text PopText2;
 	
 	// Action vars
 	public bool moving = false;
@@ -77,6 +84,18 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	public virtual void AvailSht () {
+	
+	}
+	
+	public virtual void OnMouseEnter () {
+		
+	}
+	
+	public virtual void OnMouseExit () {
+	
+	}
+	
+	public virtual void AImove () {
 	
 	}
 	

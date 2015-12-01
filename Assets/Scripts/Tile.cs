@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Tile : MonoBehaviour {
 	
@@ -17,9 +18,12 @@ public class Tile : MonoBehaviour {
 	// Use for determining Player movement
 	public int playerRelation;
 	
+	// Use for determining adjacent tiles
+	public List<Tile> neighbors = new List<Tile>();
+	
 	// Use this for initialization
 	void Start () {
-		
+		generateNeighbors();
 	}
 	
 	
@@ -240,10 +244,77 @@ public class Tile : MonoBehaviour {
 		} else if (isAdjacent & maBoiDoe.turning) {
 			maBoiDoe.lastMoved = playerRelation;
 			maBoiDoe.actionPoints--;
-		} else if (isAdjacent & isUnderFire) {
+		} else if (isAdjacent & isUnderFire & maBoiDoe.attacking & isOccupied) {
+		//Debug.Log(isAdjacent & isUnderFire & maBoiDoe.attacking);
 			BoardManager.Boardo.attackThisPlayer(playerHere);
 			maBoiDoe.actionPoints--;
 		}
+	}
+	
+	public void generateNeighbors() {		
+		neighbors = new List<Tile>();
+		//Debug.Log(BoardManager.Boardo.map[0][1]);
+		//Vector2 nn = new Vector2(gridPosition.x, gridPosition.y + 1);
+		//	Debug.Log(nn);
+			//neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		
+		
+		//N
+		
+		if (gridPosition.y != BoardManager.Boardo.mapWidth - 1) {
+			Vector2 n = new Vector2(gridPosition.x, gridPosition.y + 1);
+			// Debug.Log(n);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		}
+		//NE
+		if (gridPosition.x % 2 == 0 && gridPosition.x != BoardManager.Boardo.mapHeight - 1 && gridPosition.y != BoardManager.Boardo.mapWidth - 1) {
+			Vector2 n = new Vector2(gridPosition.x + 1, gridPosition.y);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		} else if (gridPosition.x % 2 == 1  && gridPosition.y != BoardManager.Boardo.mapWidth - 1 && gridPosition.x != BoardManager.Boardo.mapHeight - 1) {
+			Vector2 n = new Vector2(gridPosition.x + 1, gridPosition.y + 1);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		}
+		//E
+		if (gridPosition.x != BoardManager.Boardo.mapHeight - 1 && gridPosition.x != BoardManager.Boardo.mapHeight - 2) {
+			Vector2 n = new Vector2(gridPosition.x + 2, gridPosition.y);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		}
+		//SE
+		if (gridPosition.x % 2 == 0 && gridPosition.y != 0 && gridPosition.x != BoardManager.Boardo.mapHeight - 1) {
+			Vector2 n = new Vector2(gridPosition.x + 1, gridPosition.y - 1);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		} else if (gridPosition.x % 2 == 1 && gridPosition.x != BoardManager.Boardo.mapHeight - 1 ) {
+			Vector2 n = new Vector2(gridPosition.x + 1, gridPosition.y);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		}
+		//S
+		if (gridPosition.y != 0) {
+			Vector2 n = new Vector2(gridPosition.x, gridPosition.y - 1);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		}
+		//SW
+		if (gridPosition.x % 2 == 0 && gridPosition.y != 0 && gridPosition.x != 0) {
+			Vector2 n = new Vector2(gridPosition.x - 1, gridPosition.y - 1);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		} else if (gridPosition.x % 2 == 1 ) {
+			Vector2 n = new Vector2(gridPosition.x - 1, gridPosition.y);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		}	
+		//W
+		if (gridPosition.x != 0 && gridPosition.x != 1 ) {
+			Vector2 n = new Vector2(gridPosition.x - 2, gridPosition.y);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		} 
+		//Nw
+		if (gridPosition.x % 2 == 0 && gridPosition.x != 0 && gridPosition.y != BoardManager.Boardo.mapWidth - 1) {
+			Vector2 n = new Vector2(gridPosition.x - 1, gridPosition.y);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		} else if (gridPosition.x % 2 == 1  && gridPosition.y != BoardManager.Boardo.mapWidth - 1) {
+			Vector2 n = new Vector2(gridPosition.x - 1, gridPosition.y + 1);
+			neighbors.Add(BoardManager.Boardo.map[(int)Mathf.Round(n.x)][(int)Mathf.Round(n.y)]);
+		} 
+		
+
 	}
 	
 }

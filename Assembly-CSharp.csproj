@@ -58,7 +58,12 @@
      <Compile Include="Assets\Scripts\CamController.cs" />
      <Compile Include="Assets\Scripts\City.cs" />
      <Compile Include="Assets\Scripts\EventLog.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding Scripts\TileHighlight.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding Scripts\TilePath.cs" />
+     <Compile Include="Assets\Scripts\Pathfinding Scripts\TilePathFinder.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\AIPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\UserPlayer.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\CannonButton.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\EndButton.cs" />
@@ -67,21 +72,14 @@
      <Compile Include="Assets\Scripts\UI Scripts\TextManager.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\TurnButton.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\UIController.cs" />
-     <Compile Include="Assets\Scripts\UserPlayer.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\OFL.txt" />
      <None Include="Assets\Map1.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

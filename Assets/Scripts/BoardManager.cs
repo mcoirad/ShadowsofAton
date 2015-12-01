@@ -17,7 +17,7 @@ public class BoardManager : MonoBehaviour {
 	
     public int mapWidth = 12;
     public int mapHeight = 24;
-	
+	public List <List<Tile>> map = new List<List<Tile>>();
 	
 	// Turn Tracking -- 
 	public int currentPlayerIndex = 0;
@@ -34,6 +34,7 @@ public class BoardManager : MonoBehaviour {
 	private int[,] tiles;
 	
 	public GameObject Player1;
+	public GameObject CPU1;
 	private Transform boardHolder;
 	private List <Vector3> gridPositions = new List <Vector3> (); // Store tile positions
 
@@ -56,18 +57,25 @@ public class BoardManager : MonoBehaviour {
 	void BoardSetup () {
 		boardHolder = new GameObject ("Board").transform;
 		for (int x = 0; x < columns; x++) {
+			// create a row to add to 2D list
+			List <Tile> row = new List<Tile>();
+		
 			for (int y = 0; y < rows; y++) {
 				float PlotX = (float)x;
 				float PlotY = (float)y ;
 
 				Tile instance = ((GameObject)Instantiate (Sea1, new Vector3 (PlotX * 2, (PlotY + ((PlotX % 2) / 2)) * 2 , 0f), Quaternion.identity)).GetComponent<Tile>();
-				// Give it a goodass grid position
+				// Give it a goodass grid position, and add to row
+				row.Add (instance);
 				instance.gridPosition = new Vector2(x, y);
 				//Debug.Log (x);
 				//Debug.Log (y);
 				instance.transform.SetParent (boardHolder);
 			}
+			// Add row to map
+			map.Add(row);
 		}
+		
 	}
 	
 	// Switches Players turns, resetting the count if necessary 
@@ -110,6 +118,11 @@ public class BoardManager : MonoBehaviour {
 		player = ((GameObject)Instantiate(Player1, new Vector3(0,0,0), Quaternion.Euler(new Vector3()))).GetComponent<UserPlayer>();
 		//player = Player1.GetComponent<UserPlayer>();
 		players.Add(player);
+		
+		AIPlayer CPUplayer = ((GameObject)Instantiate(CPU1, new Vector3(2,5,0), Quaternion.Euler(new Vector3()))).GetComponent<AIPlayer>();
+		//player = Player1.GetComponent<UserPlayer>();
+		CPUplayer.gridPosition = new Vector2(1,2);
+		players.Add(CPUplayer);
 
 	}
 
@@ -130,6 +143,8 @@ public class BoardManager : MonoBehaviour {
         Debug.Log("Building Map...");
 		boardHolder = new GameObject ("Board").transform;
         for(int i = 0; i < tiles.GetLength(0); i++) {
+		// create a row to add to 2D list
+			List <Tile> row = new List<Tile>();
             for(int j = 0; j < tiles.GetLength(1); j++) {
 					float PlotX = (float)i;
 					float PlotY = (float)j ;
@@ -137,11 +152,13 @@ public class BoardManager : MonoBehaviour {
                     Tile instance = ((GameObject)Instantiate (Sea1, new Vector3 (PlotX * 2, (PlotY + ((PlotX % 2) / 2)) * 2 , 0f), Quaternion.identity)).GetComponent<Tile>();
 					instance.gridPosition = new Vector2(i, j);
                     instance.transform.SetParent (boardHolder);
+					row.Add (instance);
                 } else
                 if(tiles[i,j] == 2) {
                     Tile instance = ((GameObject)Instantiate (Land1, new Vector3 (PlotX * 2, (PlotY + ((PlotX % 2) / 2)) * 2 , 0f), Quaternion.identity)).GetComponent<Tile>();
                     instance.gridPosition = new Vector2(i, j);
 					instance.transform.SetParent (boardHolder);
+					row.Add (instance);
                 } else
                 if(tiles[i,j] == 3) {
                     Tile instance = ((GameObject)Instantiate (Landc2, new Vector3 (PlotX * 2, (PlotY + ((PlotX % 2) / 2)) * 2 , 0f), Quaternion.identity)).GetComponent<Tile>();
@@ -150,8 +167,12 @@ public class BoardManager : MonoBehaviour {
 					City city = ((GameObject)Instantiate (City1, new Vector3 (PlotX * 2, (PlotY + ((PlotX % 2) / 2)) * 2 , 0f), Quaternion.identity)).GetComponent<City>();
                     city.gridPosition = new Vector2(i, j);
 					city.transform.SetParent (boardHolder);
+					row.Add (instance);
                 } 
+				
             }
+			Debug.Log("Row " + i + " of size " + row.Count + " finished");
+				map.Add(row);
         }
         Debug.Log("Building Completed!");
     }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UserPlayer : PlayerController {
 
@@ -15,6 +17,11 @@ public class UserPlayer : PlayerController {
 		//base.Update();
 		//CheckInput();
 		//Debug.Log("yoo");
+		
+		if(EventSystem.current.IsPointerOverGameObject())
+			{
+				//Debug.Log("Did not Click on the UI");
+			}
 		
 		AvailDir();
 		AvailSht();
@@ -240,5 +247,32 @@ public class UserPlayer : PlayerController {
 		}
 		
 		base.TurnUpdate ();
+	}
+	
+	public override void OnMouseEnter () {
+		// Calculate screen to world so we can put a popup on top of the ships
+	
+		PopBack2 = (Instantiate(PopBack, new Vector3(0,0,0), Quaternion.Euler(new Vector3()))) as GameObject;
+		//PopBack2.transform.SetParent(Canvas.transform, false);
+		//PopBack2.rectTransform.anchoredPosition = new Vector2(118,-90);
+		Camera yub = CamController.mainCam.GetComponent<Camera>();
+		Vector2 screenPos = yub.WorldToScreenPoint(this.transform.position);
+		
+		RectTransform PopComponent = PopBack2.GetComponent<RectTransform>();
+		PopComponent.anchoredPosition = screenPos + new Vector2(50,100);
+		PopBack2.transform.SetParent(UIController.UIguy.transform);
+		//PopBack2.rectTransform.anchoredPosition = Popback2.rectTransform.InverseTransformVector(yub);
+		
+		PopText2 = (Instantiate(PopText, new Vector3(0,0,0), Quaternion.Euler(new Vector3()))) as Text;
+		PopText2.transform.SetParent(PopBack2.transform, false);
+		PopText2.rectTransform.anchoredPosition = new Vector2(72,27);
+		PopText2.text = "Ship Health: " + this.health;
+		Debug.Log("Player UI enter");
+
+	}
+	
+	public override void OnMouseExit () {
+	DestroyImmediate(PopText2);
+	DestroyImmediate(PopBack2);
 	}
 }
