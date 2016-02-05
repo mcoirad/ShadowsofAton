@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class UserPlayer : PlayerController {
 
@@ -25,6 +26,8 @@ public class UserPlayer : PlayerController {
 		
 		AvailDir();
 		AvailSht();
+		AvailSht2();
+		
 	
 	}
 	
@@ -89,6 +92,192 @@ public class UserPlayer : PlayerController {
 			//Debug.Log(BoardManager.Boardo.modu((i + dirDir), 8));
 		}
 		
+	}
+	
+	public Vector2[] findNeighb(Vector2 gridPos, int overrideVal = 2) {
+		// function includes overrideval, which if set overrides the odd/even accounting
+		Vector2[] dirAtlas = new Vector2[8];
+			if (gridPos.x % 2 == 0 || overrideVal == 0) {
+						
+						dirAtlas[0] = Vector2.down;  // N
+						dirAtlas[1] = Vector2.left;  // NE
+						dirAtlas[2] = Vector2.left * 2;  //E
+						dirAtlas[3] = Vector2.left + Vector2.up; // SE
+						dirAtlas[4] = Vector2.up; // S
+						dirAtlas[5] = Vector2.right + Vector2.up; // SW
+						dirAtlas[6] = Vector2.right * 2; // W
+						dirAtlas[7] = Vector2.right; // NW
+						
+					}
+					else if (gridPos.x % 2 == 1 || overrideVal == 1) {
+					
+						dirAtlas[0] = Vector2.down; // N
+						dirAtlas[1] = Vector2.left + Vector2.down; // NE
+						dirAtlas[2] = Vector2.left * 2; // E
+						dirAtlas[3] = Vector2.left; // SE
+						dirAtlas[4] = Vector2.up;   // S
+						dirAtlas[5] = Vector2.right; // SW
+						dirAtlas[6] = Vector2.right * 2;  //W
+						dirAtlas[7] = Vector2.right + Vector2.down; // NW
+						
+					}
+		
+		
+		return dirAtlas;
+	}
+	
+	public void AvailSht2() {
+		availShots2.Clear();
+		int dirDir = lastMoved;
+		Vector2[] dirAtlas = findNeighb(this.gridPosition);
+		
+		
+		// Starboard Cannon Range
+		// for each range "row" add the tiles in row and calculate the next row
+		//     x
+		//   x x x
+		// x x x x x
+		List<Vector2> totalList = new List<Vector2> ();
+		List<Vector2> itList = new List<Vector2> ();
+		List<Vector2> tempList = new List<Vector2> ();
+		
+		totalList.Add(dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)]);
+		itList.Add(dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)]);
+		tempList.Add(dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)]);
+		
+		Vector2 lastPos = gridPosition + dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)];
+		
+		// Always want to calculate even/odd relative to original tile
+		int lastInt = ((int)gridPosition.x) % 2;
+		
+		
+		// for each range
+		for (int i = 1; i < cannonRange; i++) {	
+			tempList.Clear();
+			// for each in row
+			for( int k = 0; k < itList.Count; k++) {
+				lastInt = ((int)(gridPosition + itList[k]).x) % 2;
+				Vector2[] newAtlas = findNeighb(itList[k], lastInt );
+				
+				// determine if on edge of spread, and add appropriate tiles
+				if (k == 0 && itList.Count != 1) {
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)] + itList[k]);}
+					//Debug.Log(itList.Count);
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((3 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((3 + dirDir), 8)] + itList[k]);}
+				} else if (k == itList.Count - 1 && itList.Count != 1) {
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)] + itList[k]);}
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((1 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((1 + dirDir), 8)] + itList[k]);}
+				} else {
+				
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)] + itList[k]);}
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((3 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((3 + dirDir), 8)] + itList[k]);}
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((1 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((1 + dirDir), 8)] + itList[k]);}
+				}
+				
+			}
+			totalList.AddRange(tempList);
+			itList = tempList;
+		}
+		availShots2 = totalList;
+		
+		// Port-side Cannon Range
+		// for each range "row" add the tiles in row and calculate the next row
+		//     x
+		//   x x x
+		// x x x x x
+		totalList = new List<Vector2> ();
+		itList = new List<Vector2> ();
+		tempList = new List<Vector2> ();
+		
+		totalList.Add(dirAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)]);
+		itList.Add(dirAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)]);
+		tempList.Add(dirAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)]);
+		
+		lastPos = gridPosition + dirAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)];
+		
+		// Always want to calculate even/odd relative to original tile
+		lastInt = ((int)gridPosition.x) % 2;
+		
+		
+		// for each range
+		for (int i = 1; i < cannonRange; i++) {	
+			tempList.Clear();
+			// for each in row
+			for( int k = 0; k < itList.Count; k++) {
+				lastInt = ((int)(gridPosition + itList[k]).x) % 2;
+				Vector2[] newAtlas = findNeighb(itList[k], lastInt );
+				
+				// determine if on edge of spread, and add appropriate tiles
+				if (k == 0 && itList.Count != 1) {
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)] + itList[k]);}
+					//Debug.Log(itList.Count);
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-3 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-3 + dirDir), 8)] + itList[k]);}
+				} else if (k == itList.Count - 1 && itList.Count != 1) {
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)] + itList[k]);}
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-1 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-1 + dirDir), 8)] + itList[k]);}
+				} else {
+				
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)] + itList[k]);}
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-3 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-3 + dirDir), 8)] + itList[k]);}
+					if (!(tempList.Contains(newAtlas[BoardManager.Boardo.modu((-1 + dirDir), 8)] + itList[k]))) {tempList.Add(newAtlas[BoardManager.Boardo.modu((-1 + dirDir), 8)] + itList[k]);}
+				}
+				
+			}
+			totalList.AddRange(tempList);
+			itList = tempList;
+		}
+		availShots2.AddRange(totalList);
+		
+		/**
+		
+		// Range 1
+		availShots2.Add(dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)]);
+		Vector2 nextPos = gridPosition + dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)];
+		
+		List<Vector2> itList = new List<Vector2> ();
+		itList.Add(gridPosition + dirAtlas[BoardManager.Boardo.modu((2 + dirDir), 8)]);
+		
+		// Range 2+
+		
+		// for each range
+		for (int i = 2; i < cannonRange; i++) {
+			
+			// for each in "row"
+			// grab the tile and add
+			for (int k = 0; k < itList.Count; k++) {
+		
+		
+			List<Vector2> newList = new List<Vector2> ();
+			for (int k = 0; k < itList.Count; k++) {
+				Vector2 newPos = dirAtlas[BoardManager.Boardo.modu((2 + dirDir) + k, 8)];
+				if (!availShots2.Contains(newPos)) { 
+					availShots2.Add(newPos) ;
+					newList.Add(newPos) ;
+				}
+			}
+			
+			dirAtlas = findNeighb(nextPos);
+			
+			
+			
+			
+			itList.Clear();
+			
+			for (int j = -1 ; j < 2; j++) {
+				Vector2 newPos = dirAtlas[BoardManager.Boardo.modu((2 + dirDir) + j, 8)];
+				if (!itList.Contains(newPos)) { itList.Add(newPos);}
+				
+			} 
+			itList = newList;
+		}
+		
+		
+				
+		// Port Cannon Range
+		availShots2.Add(dirAtlas[BoardManager.Boardo.modu((-2 + dirDir), 8)]);
+		
+
+		**/
 	}
 	
 	public override void AvailSht() {

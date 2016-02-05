@@ -99,8 +99,8 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   availShots: []
-  actionPoints: 3
-  maxActionPoints: 3
+  actionPoints: 2
+  maxActionPoints: 2
   speed: 0
   turningSpeed: 2
   cannonSwivel: 0
@@ -109,6 +109,10 @@ MonoBehaviour:
   frontCannon: 0
   backCannon: 0
   health: 5
+  closestPlayerPosition: {x: 0, y: 0}
+  path: []
+  sailNum: .699999988
+  shotNum: .5
 --- !u!114 &11457028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,7 +192,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: actionPoints
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxActionPoints
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 123888}

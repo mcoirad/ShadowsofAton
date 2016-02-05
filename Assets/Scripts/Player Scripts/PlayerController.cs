@@ -42,19 +42,21 @@ public class PlayerController : MonoBehaviour {
 	// Cannon range
 	// (perpendicular mostly, but should have ability to mount front and back cannons)
 	public List <Vector2> availShots = new List <Vector2> ();
+	public List <Vector2> availShots2 = new List <Vector2> ();
 	
 	// Action Statistics
 	public int actionPoints;
 	public int maxActionPoints;
 	
-	// PLAYER STATISTICS
+	// SHIP STATISTICS
 	// movement
-	public int speed; // Boat speed (action points used per movement?)
-	public int turningSpeed= 1; // Which squares will be available to move into
+	public int speed; // Boat speed (action points used per movement?)  **NOT USED YET**
+	public int turningSpeed= 1; // Which squares will be available to move into  **FINISHED**
 	// shooting
-	public int cannonSwivel; // Which squares will be available to shoot into
+	public int cannonSwivel; // Which squares will be available to shoot into **NOT USED YET**
+	public int cannonRange;
+	public float shootingAbility;
 	public int numCannons;
-	public int shootingAbility;
 	public bool frontCannon = false;
 	public bool backCannon = false;
 	// ship health
@@ -99,12 +101,15 @@ public class PlayerController : MonoBehaviour {
 	
 	}
 	
+	public virtual void AIturn () {
+	
+	}
+	
 	public virtual void CheckInput () {
 	
 		//Debug.Log("yo");
 	}
 	
-
 	public virtual void TurnUpdate () {
 		
 	}

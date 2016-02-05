@@ -115,7 +115,8 @@ public class BoardManager : MonoBehaviour {
 		player.gridPosition = new Vector2(1,0);
 		//player = Player1.GetComponent<UserPlayer>();
 		players.Add(player);
-		player = ((GameObject)Instantiate(Player1, new Vector3(0,0,0), Quaternion.Euler(new Vector3()))).GetComponent<UserPlayer>();
+		player = ((GameObject)Instantiate(Player1, new Vector3(4,2,0), Quaternion.Euler(new Vector3()))).GetComponent<UserPlayer>();
+		player.gridPosition = new Vector2(2,1);
 		//player = Player1.GetComponent<UserPlayer>();
 		players.Add(player);
 		

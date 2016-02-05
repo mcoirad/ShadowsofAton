@@ -146,13 +146,15 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   availShots: []
+  availShots2: []
   actionPoints: 3
   maxActionPoints: 3
   speed: 0
   turningSpeed: 1
   cannonSwivel: 0
-  numCannons: 2
+  cannonRange: 2
   shootingAbility: 3
+  numCannons: 2
   frontCannon: 0
   backCannon: 0
   health: 5
@@ -269,6 +271,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: cannonRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
